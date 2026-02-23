@@ -62,3 +62,18 @@ img {
 .forside_link {
   margin: 1rem 2rem;
 }
+
+.cta {
+  cursor: pointer;
+  background-color: rgb(227, 226, 226);
+  color: black;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 10px 50px;
+  text-decoration: none;
+  justify-self: center;
+}
+
+.cta:hover {
+  background-color: rgb(172, 171, 171);
+}
