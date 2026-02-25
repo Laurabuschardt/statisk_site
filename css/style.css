@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fbf9f2;
+}
+
 /* index knap *****************************************************************/
 .knap {
   background-color: pink;
@@ -57,15 +61,12 @@ img {
   grid-row: span 4;
   background-color: pink;
   padding: 1rem;
-}
-
-.forside_link {
-  margin: 1rem 2rem;
+  position: relative;
 }
 
 .cta {
   cursor: pointer;
-  background-color: rgb(227, 226, 226);
+  background-color: #ade4ff;
   color: black;
   border-radius: 10px;
   border-style: solid;
@@ -75,5 +76,100 @@ img {
 }
 
 .cta:hover {
-  background-color: rgb(172, 171, 171);
+  background-color: #f08a59;
+}
+
+h3 {
+  margin: 3px 0rem;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* deal */
+.deal {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  background-color: yellow;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* udsolgt */
+.udsolgt {
+  position: absolute;
+  top: 25px;
+  left: 290px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* buy */
+.buy {
+  display: flex;
+  justify-self: center;
+  background-color: pink;
+  padding: 2rem;
+  margin: 4rem;
+
+  gap: 2rem;
+}
+
+.buy .text {
+  align-self: center;
+  margin: 5rem;
+}
+
+.buy p {
+  margin-bottom: 3rem;
+}
+
+.buy img {
+  width: 700px;
+  position: relative;
+}
+
+h4 {
+  font-weight: lighter;
+  margin-top: 1rem;
+  font-size: 13px;
+  color: rgb(169, 1, 1);
+}
+
+.tilbage {
+  position: absolute;
+  top: 150px;
+  left: 190px;
+  color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* footer */
+footer {
+  background-color: #0d3175;
+  padding: 5rem;
+}
+
+/* header */
+header {
+  background-color: #0d3175;
+  padding: 3rem;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
 }
