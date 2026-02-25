@@ -105,7 +105,7 @@ p {
 .udsolgt {
   position: absolute;
   top: 25px;
-  left: 290px;
+  left: 20px;
   background-color: red;
   color: white;
   padding: 5px 10px;
@@ -145,16 +145,6 @@ h4 {
   color: rgb(169, 1, 1);
 }
 
-.tilbage {
-  position: absolute;
-  top: 150px;
-  left: 190px;
-  color: black;
-  padding: 5px 10px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
 /* footer */
 footer {
   background-color: #0d3175;
@@ -172,4 +162,29 @@ header a {
   color: white;
   font-weight: bold;
   font-size: 24px;
+}
+
+/* mobil version  */
+@media (max-width: 1275px) {
+  .buy img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .buy {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .buy .text {
+    margin: 0rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
