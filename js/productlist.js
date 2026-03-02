@@ -1,4 +1,10 @@
-const listURL = "https://kea-alt-del.dk/t7/api/products?limit=12";
+console.log("henter");
+
+const params = new URLSearchParams(window.location.search);
+const mycategory = params.get("category");
+console.log(mycategory);
+
+const listURL = `https://kea-alt-del.dk/t7/api/products?category=${mycategory}`;
 const listContainer = document.querySelector(".product-gallery");
 
 function getProducts() {
@@ -22,7 +28,7 @@ function showProducts(products) {
                     <p class="price">${product.price} kr.</p>
 
                 </div>
-                <a href="product.html" class="cta">Køb nu</a>
+                <a href="product.html?id=${product.id}" class="cta">Køb nu</a>
 
             </article>
     `;

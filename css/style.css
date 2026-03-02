@@ -46,7 +46,7 @@ h1 {
 /**** produkt liste *************************************************************/
 img {
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 9/12;
   object-fit: cover;
 }
 
