@@ -19,11 +19,11 @@ function showProducts(products) {
   products.forEach((product) => {
     listContainer.innerHTML += `
        <article class="product">
-                <span class="udsolgt">Udsolgt</span>
-                <span class="deal">Tilbud x%</span>
+                <span class="udsolgt ${product.soldout < 1 ? "udsolgt" : "hide"}">${product.soldout < 1 ? `<p> Udsolgt</p>` : ""}</span>
+                <span class="deal ${product.discount > 0 ? "deal" : "hide"}"> ${product.discount > 0 ? `<p >Tilbud ${product.discount} %</p>` : ""}</span>
                 <img src="https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp" alt="Produkt 6" />
                 <div class="text">
-                    <h3>${product.brandname}</h3>
+                    <h2>${product.brandname}</h2>
                     <h3>${product.productdisplayname}</h3>
                     <p class="price">${product.price} kr.</p>
 
