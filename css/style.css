@@ -103,8 +103,21 @@ p {
   font-size: 18px;
 }
 
+.Produkter {
+  margin: 3rem;
+  font-size: 3rem;
+}
+
 .price {
   margin-top: 1rem;
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1.5rem;
+  place-self: center;
+  align-content: center;
 }
 
 /* deal */

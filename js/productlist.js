@@ -35,4 +35,37 @@ function showProducts(products) {
   });
 }
 
+const sortByPriceBtn = document.querySelector("#sortByPriceBtn");
+const filterWomenBtn = document.querySelector("#filterWomenBtn");
+const filterMenBtn = document.querySelector("#filterMenBtn");
+const showAllBtn = document.querySelector("#showAllBtn");
+
+let allProducts = [];
+console.log(allProducts);
+
+function getProducts() {
+  fetch(listURL)
+    .then((res) => res.json())
+    .then((products) => {
+      allProducts = products;
+      showProducts(allProducts);
+    });
+}
+
+function sortByPriceAsc() {
+  const sorted = [...allProducts].sort((a, b) => a.price - b.price);
+  showProducts(sorted);
+}
+
+sortByPriceBtn.addEventListener("click", sortByPriceAsc);
+
+function filterByGender(targetGender) {
+  const filtered = allProducts.filter((product) => (product.gender || "").toLowerCase() === targetGender.toLowerCase());
+
+  showProducts(filtered);
+}
+
+filterWomenBtn.addEventListener("click", () => filterByGender("Women"));
+filterMenBtn.addEventListener("click", () => filterByGender("Men"));
+showAllBtn.addEventListener("click", () => showProducts(allProducts));
 getProducts();
