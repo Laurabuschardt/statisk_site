@@ -221,4 +221,8 @@ header a {
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .filter {
+    grid-template-columns: auto auto;
+  }
 }
